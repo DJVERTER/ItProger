@@ -19,11 +19,22 @@ namespace ItProger
             coordinates = Coordinates;
         }
 
+        public Robot(string Name, int Weight, byte[] Coordinates)
+        {
+            Console.WriteLine("Robot has been created");
+            setValues(Name, Weight, Coordinates);
+        }
+
         public void printValues()
         {
             Console.WriteLine(name + " weight " + weight + ". Coordinates: ");
             foreach (byte el in coordinates)
                 Console.WriteLine(el);
+        }
+
+        public void macheAction()
+        {
+            Console.WriteLine("Robot is mooving");
         }
     }
 }

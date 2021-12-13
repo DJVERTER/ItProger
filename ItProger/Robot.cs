@@ -25,16 +25,36 @@ namespace ItProger
             setValues(Name, Weight, Coordinates);
         }
 
-        public void printValues()
+        public void PrintValues()
         {
             Console.WriteLine(name + " weight " + weight + ". Coordinates: ");
             foreach (byte el in coordinates)
                 Console.WriteLine(el);
         }
 
-        public void macheAction()
+        public static void MacheAction()
         {
             Console.WriteLine("Robot is mooving");
         }
+
+        public int Weight
+        {
+            get
+            {
+                Console.Write("Result: ");
+                return this.weight;
+            }
+            set
+            {
+                if (value < 1)
+                    weight = 1;
+                else if (value > 500)
+                    weight = 500;
+                else
+                    weight = value;
+            }
+        }   
+         public int Width { get; set; }
     }
 }
+
